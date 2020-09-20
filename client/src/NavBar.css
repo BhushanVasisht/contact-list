@@ -1,0 +1,13 @@
+.home-page-link {
+    position: absolute;
+    margin-top: -50px;
+    left: 10px;
+    color: aliceblue;
+}
+
+.add-new-page-link {
+    position: absolute;
+    margin-top: -50px;
+    left: 60px;
+    color: #fff;
+}
