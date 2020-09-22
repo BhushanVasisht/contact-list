@@ -10,14 +10,14 @@ class SearchBar extends Component {
     constructor(props) {
         super(props);
         this.handleFilterChange = this.handleFilterChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
 
     handleFilterChange(e) {
         this.setState({filterText : e.target.value})
     }
 
-    handleSubmit(e) {
+    handleClick(e) {
         this.props.onFilterTextInput(this.state.filterText)
     }
 
@@ -28,10 +28,9 @@ class SearchBar extends Component {
                     className="search-bar"
                     type="text"
                     placeholder="Search"
-                    value={this.state.filterText}
                     onChange={this.handleFilterChange}
                 />
-                <button onClick={this.handleSubmit} className={"submit-search"}>Search</button>
+                <button onClick={this.handleClick} className={"submit-search"}>Search</button>
             </div>
         );
     }

@@ -37,7 +37,7 @@ exports.getContactEntry = (req, res) => {
     //connect to the db instance
     connection.connect()
 
-    let query = 'SELECT * FROM Contact WHERE `Contact_id` =' + req.query.id + ';'
+    let query = 'SELECT * FROM Contact'
 
     //execute the query
     connection.query(query, (err, result, fields) => {

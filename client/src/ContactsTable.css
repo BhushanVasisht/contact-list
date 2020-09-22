@@ -1,4 +1,24 @@
-.contact-table {
-    border: 2px black;
-    margin-top: 50px;
+.contacts-display {
+    border: 20px #000;
+    padding-top: 40px;
+    margin-left: 30px;
+    font-size: medium;
+}
+
+.contacts-display thead th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    border: 2px solid #ddd;
+    background-color: #009688;
+    color: aliceblue;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+.contacts-display tbody tr:hover {background-color: #ddd;}
+.contacts-display tbody tr:nth-child(even){background-color: #f2f2f2;}
+
+.modify-logo {
+    display: block;
+    width: 15px;
+    height: 15px;
 }

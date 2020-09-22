@@ -18,16 +18,18 @@ class App extends Component {
 
     constructor(props) {
         super(props);
+
         this.onFilterTextInput = this.onFilterTextInput.bind(this);
         this.handleModifyContact = this.handleModifyContact.bind(this);
+    }
 
+    componentDidMount() {
         axios({
             method : 'get',
             url : this.state.base_url + 'all'
         }).then(res => {
-            this.setState({data : res.data})
-            this.setState({headers : res.data.data[0]})
-        });
+            this.setState({data : res.data.data, headers : res.data.headers})
+        })
     }
 
     onFilterTextInput = (e) => {
@@ -35,8 +37,7 @@ class App extends Component {
             method : 'get',
             url : this.state.base_url + 'contact?id=' + e
         }).then(res => {
-            this.setState({data : res.data})
-            this.setState({headers : res.data.data[0]})
+            this.setState({data : res.data.data, headers : res.data.headers})
         });
     }
 
@@ -50,26 +51,44 @@ class App extends Component {
             return <Redirect
                 to={{
                     pathname: this.state.page,
-                    state: { item: this.state.data.data[this.state.redirect] }
+                    state: { item: this.state.data[this.state.redirect] }
                 }}
             />
         }
         else
         {
-            return (
-                <div>
-                    <div className="App-header">
-                        <header>
-                            <h2>Contacts List</h2>
-                        </header>
-                        <NavBar />
-                    </div>
-                    <SearchBar handleAdd = {this.handleAdd} onFilterTextInput={this.onFilterTextInput}/>
+            if(this.state.data !== null && this.state.headers != null)
+            {
+                return (
                     <div>
-                        <ContactsTable data = {this.state.data}headers={this.state.headers} handleModifyContact={this.handleModifyContact}/>
+                        <div className="App-header">
+                            <header>
+                                <h2>Contacts List</h2>
+                            </header>
+                            <NavBar />
+                        </div>
+                        <SearchBar handleAdd = {this.handleAdd} onFilterTextInput={this.onFilterTextInput}/>
+                        <div>
+                            <ContactsTable data = {this.state.data} headers={this.state.headers} handleModifyContact={this.handleModifyContact}/>
+                        </div>
                     </div>
-                </div>
-            );
+                );
+            }
+            else
+            {
+                return (
+                    <div>
+                        <div className="App-header">
+                            <header>
+                                <h2>Contacts List</h2>
+                            </header>
+                            <NavBar />
+                        </div>
+                        <SearchBar handleAdd = {this.handleAdd} onFilterTextInput={this.onFilterTextInput}/>
+                        <p>Loading...</p>
+                    </div>
+                );
+            }
         }
   }
 }

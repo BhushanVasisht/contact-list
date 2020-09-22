@@ -5,20 +5,7 @@ import './ModifyContact.css';
 
 class ModifyContact extends  Component {
     state = {
-        redirect: '/',
-        direct: undefined
-    }
-
-    constructor(props) {
-        super(props);
-
-        if (window.performance) {
-            if (performance.navigation.type === 1) {
-                this.state.direct = true
-            } else {
-                this.state.direct = false
-            }
-        }
+        redirect: '/'
     }
 
     render(){
