@@ -1,25 +1,21 @@
 .contacts-display {
-    border: 20px #000;
     padding-top: 40px;
-    margin-left: 30px;
-    font-size: medium;
-    overflow-x:auto;
+    margin-left: 60px;
+    font-size: large;
 }
 
-.contacts-display thead th {
+.contacts-display thead {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    border: 2px solid #ddd;
+    border: 2px solid black;
     background-color: #009688;
     color: aliceblue;
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 20px;
 }
-.contacts-display tbody tr:hover {background-color: #ddd;}
-.contacts-display tbody tr:nth-child(even){background-color: #f2f2f2;}
 
-.modify-logo {
-    display: block;
-    width: 15px;
-    height: 15px;
+.contacts-display tbody {
+    background-color: #ddd;
+    border: 2px solid #ddd;
 }

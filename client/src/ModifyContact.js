@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import { Redirect } from "react-router-dom";
 import NavBar from "./NavBar";
 import './ModifyContact.css';
+import NewForm from "./NewForm";
 
 class ModifyContact extends Component {
     state = {
@@ -9,7 +10,6 @@ class ModifyContact extends Component {
     }
 
     render(){
-        console.log(this.props)
         if(this.props === undefined || this.props.location === undefined || this.props.location.state === undefined || this.props.location.state.item === undefined)
         {
             return <Redirect to={this.state.redirect} />
@@ -22,7 +22,7 @@ class ModifyContact extends Component {
                     </header>
                     <NavBar />
                 </div>
-                <p>Test</p>
+                <NewForm data={this.props.data} />
             </div>
         );
     }

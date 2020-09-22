@@ -41,10 +41,6 @@ class App extends Component {
         });
     }
 
-    handleViewVerbose = (e) => {
-        this.setState({redirect : parseInt(e.target.value), page : '/view'})
-    }
-
     handleModifyContact = (e) => {
         this.setState({redirect : parseInt(e.target.value), page : '/modify'})
     }
@@ -81,9 +77,7 @@ class App extends Component {
                             <NavBar />
                         </div>
                         <SearchBar handleAdd = {this.handleAdd} onFilterTextInput={this.onFilterTextInput}/>
-                        <div>
-                            <ContactsTable data = {this.state.data} headers={this.state.headers} handleModifyContact={this.handleModifyContact} handleViewVerbose={this.handleViewVerbose}/>
-                        </div>
+                        <ContactsTable data = {this.state.data} headers={this.state.headers} handleModifyContact={this.handleModifyContact}/>
                     </div>
                 );
             }

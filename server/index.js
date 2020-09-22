@@ -17,12 +17,17 @@ app.use(bodyParser.json())
 //setup server paths
 app.get('/all', (req,res) => {
     //return getH.getAllData(res)
-    return res.json({headers: ['Name', 'Phone', 'Email','Address'], data: [
-            {key: 1, name: 'Tom Jackson', phone: '555-444-333', email: 'tom@gmail.com', address : [{type: 'Office', add : '800 W Renner Road'}, {type:'Home', add: '7575 Frankford Road'}]},
-            {key: 2, name: 'Mike James', phone: '555-777-888', email: 'mikejames@gmail.com', address : [{type: 'Office', add : '800 W Renner Road'}, {type:'Home', add: '7575 Frankford Road'}]},
-            {key: 3, name: 'Janet Larson', phone: '555-222-111', email: 'janetlarson@gmail.com', address : [{type: 'Office', add : '800 W Renner Road'}, {type:'Home', add: '7575 Frankford Road'}]},
-            {key: 4, name: 'Clark Thompson', phone: '555-444-333', email: 'clark123@gmail.com', address : [{type: 'Office', add : '800 W Renner Road'}, {type:'Home', add: '7575 Frankford Road'}]},
-            {key: 5,name: 'Emma Page', phone: '555-444-333', email: 'emma1page@gmail.com', address : [{type: 'Office', add : '800 W Renner Road'}, {type:'Home', add: '7575 Frankford Road'}]},
+    return res.json({
+        headers: ['First Name', 'Middle Name', 'Last Name', 'Address List', 'Phone List', 'Date List'],
+        data: [
+            {key: 1, name: {first:'Tom', middle:'', last:'Jackson'}, phone: [{type: 'Office', num : '555-444-333'}], dates: [{type: 'Birthday', date: '12/07/1995'}], address : [{type: 'Office', add : '800 W Campbell Road, Richardson, Texas-75080'}, {type:'Home', add: '800 W Renner Road, Dallas, Texas-75080'}]},
+            {key: 2, name: {first:'Mike', middle:'Oliver', last:'James'}, phone: [{type: 'Office', num : '555-444-333'}], dates: [{type: 'Anniversary', date: '12/07/1995'}], address : [{type: 'Office', add : '800 W Renner Road'}, {type:'Home', add: '7575 Frankford Road'}]},
+            {key: 3, name: {first:'Janet', middle:'', last:'Larson'}, phone: [{type: 'Office', num : '555-444-333'}], dates: [{type: 'Reopen', date: '12/07/1995'}], address : [{type: 'Office', add : '800 W Renner Road'}, {type:'Home', add: '7575 Frankford Road'}]},
+            {key: 4, name: {first:'Clark', middle:'', last:'Thompson'}, phone: [{type: 'Office', num : '555-444-333'}], dates: [{type: 'Wedding', date: '12/07/1995'}], address : [{type: 'Office', add : '800 W Renner Road'}, {type:'Home', add: '7575 Frankford Road'}]},
+            {key: 5, name: {first:'Emma', middle:'', last:'Page'}, phone: [{type: 'Office', num : '555-444-333'}], dates: [{type: 'Birthday', date: '12/07/1995'}], address : [{type: 'Office', add : '800 W Renner Road'}, {type:'Home', add: '7575 Frankford Road'}]},
+            {key: 6, name: 'Emily Thompson', phone: [{type: 'Office', num : '555-444-333'}], dates: [{type: 'Birthday', date: '12/07/1995'}], address : [{type: 'Office', add : '800 W Renner Road'}, {type:'Home', add: '7575 Frankford Road'}]},
+            {key: 7, name: 'Aditya Pandhare', phone: [{type: 'Office', num : '555-444-333'}], dates: [{type: 'Birthday', date: '12/07/1995'}], address : [{type: 'Office', add : '800 W Renner Road'}, {type:'Home', add: '7575 Frankford Road'}]},
+            {key: 8, name: {first:'Loos', middle:'Mada', last:'Yogi'}, phone: [{type: 'Office', num : '555-444-333'}], dates: [{type: 'Reopen', date: '12/07/1995'}], address : [{type: 'Office', add : '800 W Renner Road'}, {type:'Home', add: '7575 Frankford Road'}]}
         ]})
 })
 

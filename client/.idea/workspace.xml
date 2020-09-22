@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5f42f3a-30af-4c46-a8f7-156ddc2a047b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DetailedContactView.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DetailedContactView.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NewForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ViewContact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ContactsTable.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContactsTable.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ContactsTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContactsTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DetailedContactView.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DetailedContactView.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ModifyContact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModifyContact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NewContactApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/NewContactApp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NewForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/NewForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ViewContact.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../server/index.js" afterDir="false" />
@@ -81,7 +79,7 @@
       <workItem from="1600554663013" duration="5666000" />
       <workItem from="1600571716261" duration="5260000" />
       <workItem from="1600707565468" duration="10907000" />
-      <workItem from="1600792995821" duration="5523000" />
+      <workItem from="1600792995821" duration="12556000" />
     </task>
     <servers />
   </component>
@@ -100,10 +98,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="408" y="193" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1440.900@0.0.1440.900" timestamp="1600571611746" />
-    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600559396614">
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600803380831">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1600559396614" />
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1600803380831" />
     <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1600796667933">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
