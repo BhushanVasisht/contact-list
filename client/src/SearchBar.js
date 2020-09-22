@@ -18,7 +18,6 @@ class SearchBar extends Component {
     }
 
     handleSubmit(e) {
-        console.log(this.state.filterText)
         this.props.onFilterTextInput(this.state.filterText)
     }
 

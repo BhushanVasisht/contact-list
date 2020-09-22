@@ -2,42 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c1529b5-f37f-4efb-af28-5461048e1343" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../client/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/.idea/client.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/src/ContactsTable.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/src/ContactsTable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/src/NavBar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/src/NavBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/src/NewContactApp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/src/SearchBar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/src/SearchBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/server.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/delH.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/getH.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/postH.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/ModifyContact.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/ModifyContact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/ContactsTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/ContactsTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/SearchBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/SearchBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +65,8 @@
       <updated>1600474266630</updated>
       <workItem from="1600474268396" duration="14679000" />
       <workItem from="1600554663809" duration="1991000" />
-      <workItem from="1600571715853" duration="815000" />
+      <workItem from="1600571715853" duration="1337000" />
+      <workItem from="1600707566050" duration="2067000" />
     </task>
     <servers />
   </component>
@@ -107,21 +81,25 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="184" y="112" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1600474556364" />
-    <state width="1419" height="299" key="GridCell.Tab.0.bottom" timestamp="1600585738607">
+    <state width="1419" height="299" key="GridCell.Tab.0.bottom" timestamp="1600753616665">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="299" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1600585738607" />
-    <state width="1419" height="299" key="GridCell.Tab.0.center" timestamp="1600585738606">
+    <state width="1419" height="299" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1600753616665" />
+    <state width="1419" height="299" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1600659722269" />
+    <state width="1419" height="299" key="GridCell.Tab.0.center" timestamp="1600753616662">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="299" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1600585738606" />
-    <state width="1419" height="299" key="GridCell.Tab.0.left" timestamp="1600585738605">
+    <state width="1419" height="299" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1600753616662" />
+    <state width="1419" height="299" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1600659722268" />
+    <state width="1419" height="299" key="GridCell.Tab.0.left" timestamp="1600753616660">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="299" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1600585738605" />
-    <state width="1419" height="299" key="GridCell.Tab.0.right" timestamp="1600585738606">
+    <state width="1419" height="299" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1600753616660" />
+    <state width="1419" height="299" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1600659722267" />
+    <state width="1419" height="299" key="GridCell.Tab.0.right" timestamp="1600753616663">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="299" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1600585738606" />
+    <state width="1419" height="299" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1600753616663" />
+    <state width="1419" height="299" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1600659722269" />
   </component>
 </project>

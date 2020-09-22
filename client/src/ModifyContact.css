@@ -1,0 +1,13 @@
+.App-header{
+    position: static;
+    background-color: #009688;
+    width: 100%;
+    align-items: normal;
+}
+
+header{
+    text-align: center;
+    font-size: 1.2em;
+    color: aliceblue;
+    font-family: serif;
+}

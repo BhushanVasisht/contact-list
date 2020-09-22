@@ -2,42 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5f42f3a-30af-4c46-a8f7-156ddc2a047b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/client.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ContactsTable.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ContactsTable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NavBar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NavBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NewContactApp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SearchBar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SearchBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../server/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../server/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../server/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../server/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../server/.idea/server.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../server/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../server/data/delH.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../server/data/getH.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../server/data/postH.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../server/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../server/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../server/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ModifyContact.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ModifyContact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ContactsTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContactsTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SearchBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/SearchBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../server/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -101,7 +74,8 @@
       <updated>1600486322575</updated>
       <workItem from="1600486323766" duration="15890000" />
       <workItem from="1600554663013" duration="5666000" />
-      <workItem from="1600571716261" duration="4445000" />
+      <workItem from="1600571716261" duration="5260000" />
+      <workItem from="1600707565468" duration="4454000" />
     </task>
     <servers />
   </component>
@@ -124,22 +98,26 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1600559396614" />
-    <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1600574368170">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1600659726306">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1600574368170" />
-    <state width="1419" height="245" key="GridCell.Tab.0.center" timestamp="1600574368168">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1600637567326" />
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1600659726306" />
+    <state width="1419" height="245" key="GridCell.Tab.0.center" timestamp="1600659726305">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1600574368168" />
-    <state width="1419" height="245" key="GridCell.Tab.0.left" timestamp="1600574368167">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1419" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1600637567325" />
+    <state width="1419" height="245" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1600659726305" />
+    <state width="1419" height="245" key="GridCell.Tab.0.left" timestamp="1600659726305">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1600574368167" />
-    <state width="1419" height="245" key="GridCell.Tab.0.right" timestamp="1600574368169">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1419" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1600637567324" />
+    <state width="1419" height="245" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1600659726305" />
+    <state width="1419" height="245" key="GridCell.Tab.0.right" timestamp="1600659726306">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1600574368169" />
+    <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1600637567325" />
+    <state width="1419" height="245" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1600659726306" />
     <state width="1419" height="304" key="GridCell.Tab.1.bottom" timestamp="1600571631496">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

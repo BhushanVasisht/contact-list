@@ -17,7 +17,7 @@ app.use(bodyParser.json())
 //setup server paths
 app.get('/all', (req,res) => {
     //return getH.getAllData(res)
-    return res.json({data: []})
+    return res.json({data: [{},{},{},{},{},{}]})
 })
 
 app.get('/contact', (req, res) => {

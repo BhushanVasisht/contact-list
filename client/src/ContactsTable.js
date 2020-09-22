@@ -13,12 +13,6 @@ class ContactsTable extends Component {
         headers: null
     }
 
-    // constructor(props) {
-    //     super(props);
-    //     this.state.headers = props.headers;
-    //     //this.state.data = props.data;
-    // }
-
     getRowsData = (type) => {
         if(type === 'h')
             this.state.data.map( (elm, idx) => {
@@ -26,6 +20,7 @@ class ContactsTable extends Component {
                     <tr>
                         <td>{this.state.data[0]['name']}</td>
                         <td>{this.state.data[0]['phone']}</td>
+                        <td><button onClick={this.props.handleModify}>Modify</button></td>
                     </tr>
                 )
             })
@@ -33,6 +28,7 @@ class ContactsTable extends Component {
             return (<tr>
                 <td>{this.state.data[3]['name']}</td>
                 <td>{this.state.data[3]['phone']}</td>
+                <td><button value = {3} onClick={this.props.handleModifyContact}>Modify</button></td>
             </tr>)
     }
 
