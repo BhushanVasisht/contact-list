@@ -2,14 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c1529b5-f37f-4efb-af28-5461048e1343" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../client/src/DetailedContactView.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/DetailedContactView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/NewForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/ViewContact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/ContactsTable.css" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/ContactsTable.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/ContactsTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/ContactsTable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/ModifyContact.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/ModifyContact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/SearchBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/SearchBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/NewContactApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/NewContactApp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/getH.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/getH.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +71,8 @@
       <workItem from="1600474268396" duration="14679000" />
       <workItem from="1600554663809" duration="1991000" />
       <workItem from="1600571715853" duration="1337000" />
-      <workItem from="1600707566050" duration="4703000" />
+      <workItem from="1600707566050" duration="5538000" />
+      <workItem from="1600792992217" duration="3286000" />
     </task>
     <servers />
   </component>

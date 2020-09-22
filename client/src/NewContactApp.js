@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import NavBar from "./NavBar";
-
+import NewForm from "./NewForm";
 
 class NewContactApp extends Component {
 
@@ -14,7 +14,7 @@ class NewContactApp extends Component {
                     <NavBar />
                 </div>
                 <div>
-                    <p>Here i will add a form</p>
+                    <NewForm />
                 </div>
             </div>
         );

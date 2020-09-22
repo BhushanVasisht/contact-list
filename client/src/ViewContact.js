@@ -1,15 +1,22 @@
-import React, {Component} from "react";
+import React, {Component} from 'react';
 import { Redirect } from "react-router-dom";
 import NavBar from "./NavBar";
-import './ModifyContact.css';
+import DetailedContactView from "./DetailedContactView";
 
-class ModifyContact extends Component {
+class ViewContact extends Component{
     state = {
-        redirect: '/'
+        redirect: '/',
+        data: undefined,
+        headers: undefined
+    }
+
+    constructor(props) {
+        super(props);
+        this.state.data = this.props.location.state.item.data
+        this.state.headers = this.props.location.state.item.headers
     }
 
     render(){
-        console.log(this.props)
         if(this.props === undefined || this.props.location === undefined || this.props.location.state === undefined || this.props.location.state.item === undefined)
         {
             return <Redirect to={this.state.redirect} />
@@ -22,10 +29,12 @@ class ModifyContact extends Component {
                     </header>
                     <NavBar />
                 </div>
-                <p>Test</p>
+                <div>
+                    <DetailedContactView data = {this.state.data} headers={this.state.headers} handleModifyContact={this.props.handleModifyContact}/>
+                </div>
             </div>
         );
     }
 }
 
-export default ModifyContact;
+export default ViewContact;

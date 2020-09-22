@@ -13,12 +13,12 @@ class App extends Component {
         headers : null,
         base_url: 'http://localhost:3000/',
         redirect: undefined,
-        page: '/'
+        page: '/',
+        rerender: false
     }
 
     constructor(props) {
         super(props);
-
         this.onFilterTextInput = this.onFilterTextInput.bind(this);
         this.handleModifyContact = this.handleModifyContact.bind(this);
     }
@@ -41,8 +41,18 @@ class App extends Component {
         });
     }
 
+    handleViewVerbose = (e) => {
+        this.setState({redirect : parseInt(e.target.value), page : '/view'})
+    }
+
     handleModifyContact = (e) => {
-        this.setState({redirect : e.target.value, page : '/modify'})
+        this.setState({redirect : parseInt(e.target.value), page : '/modify'})
+    }
+
+    handleDelete = (e) => {
+        let cfrm = window.confirm("Press a button!")
+        if(cfrm)
+            this.setState({rerender : true})
     }
 
     render(){
@@ -51,7 +61,10 @@ class App extends Component {
             return <Redirect
                 to={{
                     pathname: this.state.page,
-                    state: { item: this.state.data[this.state.redirect] }
+                    state: { item: {
+                            data : this.state.data[this.state.redirect],
+                            headers : this.state.headers
+                        }}
                 }}
             />
         }
@@ -69,7 +82,7 @@ class App extends Component {
                         </div>
                         <SearchBar handleAdd = {this.handleAdd} onFilterTextInput={this.onFilterTextInput}/>
                         <div>
-                            <ContactsTable data = {this.state.data} headers={this.state.headers} handleModifyContact={this.handleModifyContact}/>
+                            <ContactsTable data = {this.state.data} headers={this.state.headers} handleModifyContact={this.handleModifyContact} handleViewVerbose={this.handleViewVerbose}/>
                         </div>
                     </div>
                 );

@@ -31,7 +31,18 @@ class ContactsTable extends Component {
                         <td>{data.name}</td>
                         <td>{data.phone}</td>
                         <td>{data.email}</td>
+                        <td>{data.address.map((item, k) => {
+                            return (
+                                <ul key={k}>
+                                    <li>
+                                        <p>{item.type}: {item.add}</p>
+                                    </li>
+                                </ul>
+                            )
+                            })}</td>
+                        <td><button value={key} onClick={this.props.handleViewVerbose}>View</button></td>
                         <td><button value={key} onClick={this.props.handleModifyContact}>Edit</button></td>
+                        <td><button value={key} onClick={this.props.handleDelete}>Delete</button></td>
                     </tr>
                 )
             })}</tbody>
