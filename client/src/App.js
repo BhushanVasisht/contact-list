@@ -21,6 +21,7 @@ class App extends Component {
         super(props);
         this.onFilterTextInput = this.onFilterTextInput.bind(this);
         this.handleModifyContact = this.handleModifyContact.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
     }
 
     componentDidMount() {
@@ -35,7 +36,7 @@ class App extends Component {
     onFilterTextInput = (e) => {
         axios({
             method : 'get',
-            url : this.state.base_url + 'contact?id=' + e
+            url : this.state.base_url + 'all'
         }).then(res => {
             this.setState({data : res.data.data, headers : res.data.headers})
         });
@@ -46,9 +47,12 @@ class App extends Component {
     }
 
     handleDelete = (e) => {
-        let cfrm = window.confirm("Press a button!")
-        if(cfrm)
-            this.setState({rerender : true})
+        axios({
+            method : 'get',
+            url : this.state.base_url + 'all'
+        }).then(res => {
+            this.setState({data : res.data.data, headers : res.data.headers})
+        });
     }
 
     render(){
@@ -77,7 +81,7 @@ class App extends Component {
                             <NavBar />
                         </div>
                         <SearchBar handleAdd = {this.handleAdd} onFilterTextInput={this.onFilterTextInput}/>
-                        <ContactsTable data = {this.state.data} headers={this.state.headers} handleModifyContact={this.handleModifyContact}/>
+                        <ContactsTable data = {this.state.data} headers={this.state.headers} handleModifyContact={this.handleModifyContact} handleDelete={this.handleDelete}/>
                     </div>
                 );
             }

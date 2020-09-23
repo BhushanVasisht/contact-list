@@ -18,6 +18,7 @@ class SearchBar extends Component {
     }
 
     handleClick(e) {
+        console.log("hi")
         this.props.onFilterTextInput(this.state.filterText)
     }
 

@@ -22,7 +22,7 @@ class ModifyContact extends Component {
                     </header>
                     <NavBar />
                 </div>
-                <NewForm data={this.props.data} />
+                <NewForm props={this.props}/>
             </div>
         );
     }
