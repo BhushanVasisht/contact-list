@@ -25,9 +25,9 @@ class ContactsTable extends Component {
             return <tbody>{this.state.data.map((data, key) => {
                 return (
                     <tr key={key}>
-                        <td>{data.name.first}</td>
-                        <td>{data.name.middle}</td>
-                        <td>{data.name.last}</td>
+                        <td>{data.fname}</td>
+                        <td>{data.mname}</td>
+                        <td>{data.lname}</td>
                         <td>
                             <div>
                                 <table>
@@ -35,8 +35,8 @@ class ContactsTable extends Component {
                                     {data.address.map((item, k) => {
                                         return (
                                             <tr key={k}>
-                                                <th>{item.type}</th>
-                                                <td>{item.add}</td>
+                                                <th>{item.address_type}</th>
+                                                <td>{item.street}, {item.city}, {item.state}-{item.zip}</td>
                                             </tr>
                                         )
                                     })}
@@ -49,9 +49,8 @@ class ContactsTable extends Component {
                                 {data.phone.map((item, k) => {
                                     return (
                                         <tbody key={k}>
-                                            <tr >
-                                                <th>{item.type}</th>
-                                                <td>{item.num}</td>
+                                            <tr>
+                                                <th>{item.phone_type}</th><td>{item.area_code}-{item.number}</td>
                                             </tr>
                                         </tbody>
                                     )
@@ -65,8 +64,8 @@ class ContactsTable extends Component {
                                     {data.dates.map((item, k) => {
                                         return (
                                             <tr key={k}>
-                                                <th>{item.type}</th>
-                                                <td>{item.date}</td>
+                                                <th>{item.date_type}</th>
+                                                <td><input readOnly={true} type={'date'} value={item.date} /></td>
                                             </tr>
                                         )
                                     })}

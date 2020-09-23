@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c1529b5-f37f-4efb-af28-5461048e1343" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../client/src/NewForm.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/ContactsTable.css" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/ContactsTable.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/ModifyContact.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/ModifyContact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/ContactsTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/ContactsTable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/NewForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/NewForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/SearchBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/SearchBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
@@ -68,7 +68,8 @@
       <workItem from="1600571715853" duration="1337000" />
       <workItem from="1600707566050" duration="5538000" />
       <workItem from="1600792992217" duration="9265000" />
-      <workItem from="1600813466667" duration="1827000" />
+      <workItem from="1600813466667" duration="8118000" />
+      <workItem from="1600859993204" duration="74000" />
     </task>
     <servers />
   </component>

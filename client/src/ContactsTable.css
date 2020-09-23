@@ -1,7 +1,9 @@
 .contacts-display {
+    border-collapse: revert;
     padding-top: 40px;
     margin-left: 60px;
-    font-size: large;
+    font-size: small;
+    overflow-x: auto;
 }
 
 .contacts-display thead {
