@@ -15,3 +15,11 @@
     left: 1010px;
     font-size: 20px;
 }
+
+.restore-db {
+    display: inline-block;
+    margin-top: -10px;
+    position: absolute;
+    left: 1300px;
+    font-size: 20px;
+}

@@ -32,6 +32,7 @@ class SearchBar extends Component {
                     onChange={this.handleFilterChange}
                 />
                 <button onClick={this.handleClick} className={"submit-search"}>Search</button>
+                <button onClick={this.handleRestore} className={"restore-db"}>RestoreDB</button>
             </div>
         );
     }

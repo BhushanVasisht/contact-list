@@ -10,7 +10,6 @@ class App extends Component {
 
     state = {
         data : null,
-        headers : null,
         base_url: 'http://localhost:3000/',
         redirect: undefined,
         page: '/',
@@ -29,7 +28,7 @@ class App extends Component {
             method : 'get',
             url : this.state.base_url + 'all'
         }).then(res => {
-            this.setState({data : res.data.data, headers : res.data.headers})
+            this.setState({data : res.data.data})
         })
     }
 
@@ -38,7 +37,7 @@ class App extends Component {
             method : 'get',
             url : this.state.base_url + 'all'
         }).then(res => {
-            this.setState({data : res.data.data, headers : res.data.headers})
+            this.setState({data : res.data.data})
         });
     }
 
@@ -51,7 +50,7 @@ class App extends Component {
             method : 'get',
             url : this.state.base_url + 'all'
         }).then(res => {
-            this.setState({data : res.data.data, headers : res.data.headers})
+            this.setState({data : res.data.data})
         });
     }
 
@@ -62,15 +61,14 @@ class App extends Component {
                 to={{
                     pathname: this.state.page,
                     state: { item: {
-                            data : this.state.data[this.state.redirect],
-                            headers : this.state.headers
-                        }}
+                            data : this.state.data[this.state.redirect]
+                    }}
                 }}
             />
         }
         else
         {
-            if(this.state.data !== null && this.state.headers != null)
+            if(this.state.data !== null)
             {
                 return (
                     <div>
@@ -81,7 +79,7 @@ class App extends Component {
                             <NavBar />
                         </div>
                         <SearchBar handleAdd = {this.handleAdd} onFilterTextInput={this.onFilterTextInput}/>
-                        <ContactsTable data = {this.state.data} headers={this.state.headers} handleModifyContact={this.handleModifyContact} handleDelete={this.handleDelete}/>
+                        <ContactsTable data = {this.state.data} handleModifyContact={this.handleModifyContact} handleDelete={this.handleDelete}/>
                     </div>
                 );
             }
@@ -96,7 +94,7 @@ class App extends Component {
                             <NavBar />
                         </div>
                         <SearchBar handleAdd = {this.handleAdd} onFilterTextInput={this.onFilterTextInput}/>
-                        <p>Loading...</p>
+                        <img className={'loading-gif'} src={'https://tinyurl.com/yyo3y8cn'} alt={'Loading data'} />
                     </div>
                 );
             }

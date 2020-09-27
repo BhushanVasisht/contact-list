@@ -8,21 +8,25 @@ class NewForm extends Component{
         form_data: {
             fname: '',
             mname: '',
-            lname: ''
+            lname: '',
+            address_list: [],
+            phone_list: [],
+            date_list: []
         }
     }
 
     constructor(props) {
         super(props);
 
-        if(props.props !== undefined)
-        {
-            this.state.data = this.props.props.location.state.item.data
-            this.state.form_data = this.state.data
-        }
-
         this.handleMoreComponents = this.handleMoreComponents.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    componentDidMount() {
+        if(this.props.props !== undefined)
+        {
+            this.setState({data : this.props.props.location.state.item.data, form_data : this.props.props.location.state.item.data})
+        }
     }
 
     handleMoreComponents = (e) => {
@@ -34,6 +38,7 @@ class NewForm extends Component{
     }
 
     render() {
+        console.log(this.state.data)
         return(
             <div className={"contact-form"}>
                 <h2 hidden={this.props.props !== undefined}>Add New Contact</h2>
@@ -60,7 +65,7 @@ class NewForm extends Component{
                                         <table className={'internal-address-table'}>
                                             {
                                                 this.state.data !== undefined ?
-                                                    this.state.data.address.map((item, key) => {
+                                                    this.state.data.address_list.map((item, key) => {
                                                         return (
                                                             <tbody key={key}>
                                                                 <tr>
@@ -70,7 +75,7 @@ class NewForm extends Component{
                                                                 </tr>
                                                                 <tr>
                                                                     <th><label>Street Address</label></th>
-                                                                    <td><input required value={item.street} name="street" type={'text'}/></td>
+                                                                    <td><input required value={item.address} name="street" type={'text'}/></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <th><label>City</label></th>
@@ -127,7 +132,7 @@ class NewForm extends Component{
                                         <table className={'internal-phone-table'}>
                                             {
                                                 this.state.data !== undefined ?
-                                                    this.state.data.phone.map((item, key) => {
+                                                    this.state.data.phone_list.map((item, key) => {
                                                         return (
                                                             <tbody key={key}>
                                                                 <tr>
@@ -183,7 +188,7 @@ class NewForm extends Component{
                                         <table className={'internal-date-table'}>
                                             {
                                                 this.state.data !== undefined ?
-                                                    this.state.data.dates.map((item, key) => {
+                                                    this.state.data.date_list.map((item, key) => {
                                                         return (
                                                             <tbody key={key}>
                                                                 <tr>

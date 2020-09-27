@@ -2,8 +2,9 @@
     border-collapse: revert;
     padding-top: 40px;
     margin-left: 60px;
-    font-size: small;
+    font-size: medium;
     overflow-x: auto;
+    overflow-y: auto;
 }
 
 .contacts-display thead {
@@ -13,7 +14,7 @@
     border: 2px solid black;
     background-color: #009688;
     color: aliceblue;
-    font-family: "Trebuchet MS", Arial, Helvetica, serif;
+    font-family: serif;
     font-size: 20px;
 }
 

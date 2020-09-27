@@ -4,39 +4,55 @@ import './ContactsTable.css';
 class ContactsTable extends Component {
     state = {
         data : null,
-        headers : null
+        headers : ['ID','First Name', 'Middle Name', 'Last Name', 'Telephone Numbers', 'Addresses', 'Important Dates', 'Edit', 'Delete']
     }
 
     constructor(props) {
         super(props);
         this.state.data = props.data
-        this.state.headers = props.headers
     }
 
     getRowsData = (type) => {
         if(type === 'h')
+        {
             return (
-                <tr>{this.state.headers.map((hd, key) => {
-                    return <th key={key}>{hd}</th>
+                <tr>{this.state.headers.map( (hd,k) => {
+                    return <th key={k}>{hd}</th>
                 })}
                 </tr>
             )
+        }
         else
-            return <tbody>{this.state.data.map((data, key) => {
+            return <tbody>{this.state.data.map((data,key) => {
                 return (
                     <tr key={key}>
+                        <th>{data.contact_id}</th>
                         <td>{data.fname}</td>
                         <td>{data.mname}</td>
                         <td>{data.lname}</td>
                         <td>
+                            <table className={"variable-table"}>
+                                {data.phone_list.map((item, k) => {
+                                    return (
+                                        <tbody key={k}>
+                                        <tr>
+                                            <th>{item.phone_type}</th><td>{item.area_code}-{item.number}</td>
+                                        </tr>
+                                        </tbody>
+                                    )
+                                })}
+                            </table>
+                        </td>
+
+                        <td>
                             <div>
                                 <table>
                                     <tbody className={"variable-table"}>
-                                    {data.address.map((item, k) => {
+                                    {data.address_list.map((item, k) => {
                                         return (
                                             <tr key={k}>
                                                 <th>{item.address_type}</th>
-                                                <td>{item.street}, {item.city}, {item.state}-{item.zip}</td>
+                                                <td>{item.address}, {item.city}, {item.state}{item.zip !== '' ? '-'+item.zip: ''}</td>
                                             </tr>
                                         )
                                     })}
@@ -44,24 +60,12 @@ class ContactsTable extends Component {
                                 </table>
                             </div>
                         </td>
-                        <td>
-                            <table className={"variable-table"}>
-                                {data.phone.map((item, k) => {
-                                    return (
-                                        <tbody key={k}>
-                                            <tr>
-                                                <th>{item.phone_type}</th><td>{item.area_code}-{item.number}</td>
-                                            </tr>
-                                        </tbody>
-                                    )
-                                })}
-                            </table>
-                        </td>
+
                         <td>
                             <div>
                                 <table>
                                     <tbody className={"variable-table"}>
-                                    {data.dates.map((item, k) => {
+                                    {data.date_list.map((item, k) => {
                                         return (
                                             <tr key={k}>
                                                 <th>{item.date_type}</th>
@@ -74,7 +78,7 @@ class ContactsTable extends Component {
                             </div>
                         </td>
                         <td><button value={key} onClick={this.props.handleModifyContact}>Edit</button></td>
-                        <td><button value={key} onClick={this.props.handleDelete}>Delete</button></td>
+                        <td><button onClick={this.props.handleDelete}>Delete</button></td>
                     </tr>
                 )
             })}
