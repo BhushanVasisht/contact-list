@@ -4,7 +4,7 @@ import './ContactsTable.css';
 class ContactsTable extends Component {
     state = {
         data : null,
-        headers : ['ID','First Name', 'Middle Name', 'Last Name', 'Telephone Numbers', 'Addresses', 'Important Dates', 'Edit', 'Delete']
+        headers : ['No.','First Name', 'Middle Name', 'Last Name', 'Telephone Numbers', 'Addresses', 'Important Dates', 'Edit', 'Delete']
     }
 
     constructor(props) {
@@ -22,11 +22,12 @@ class ContactsTable extends Component {
                 </tr>
             )
         }
-        else
-            return <tbody>{this.state.data.map((data,key) => {
+        else {
+            let count = 1;
+            return <tbody>{this.state.data.map((data, key) => {
                 return (
                     <tr key={key}>
-                        <th>{data.contact_id}</th>
+                        <td>{count++}</td>
                         <td>{data.fname}</td>
                         <td>{data.mname}</td>
                         <td>{data.lname}</td>
@@ -36,7 +37,8 @@ class ContactsTable extends Component {
                                     return (
                                         <tbody key={k}>
                                         <tr>
-                                            <th>{item.phone_type}</th><td>{item.area_code}-{item.number}</td>
+                                            <th>{item.phone_type}</th>
+                                            <td>{item.area_code}-{item.number}</td>
                                         </tr>
                                         </tbody>
                                     )
@@ -52,7 +54,7 @@ class ContactsTable extends Component {
                                         return (
                                             <tr key={k}>
                                                 <th>{item.address_type}</th>
-                                                <td>{item.address}, {item.city}, {item.state}{item.zip !== '' ? '-'+item.zip: ''}</td>
+                                                <td>{item.address}, {item.city}, {item.state}{item.zip !== '' ? '-' + item.zip : ''}</td>
                                             </tr>
                                         )
                                     })}
@@ -69,7 +71,7 @@ class ContactsTable extends Component {
                                         return (
                                             <tr key={k}>
                                                 <th>{item.date_type}</th>
-                                                <td><input readOnly={true} type={'date'} value={item.date} /></td>
+                                                <td><input readOnly={true} type={'date'} value={item.date}/></td>
                                             </tr>
                                         )
                                     })}
@@ -77,12 +79,17 @@ class ContactsTable extends Component {
                                 </table>
                             </div>
                         </td>
-                        <td><button value={key} onClick={this.props.handleModifyContact}>Edit</button></td>
-                        <td><button onClick={this.props.handleDelete}>Delete</button></td>
+                        <td>
+                            <button value={key} onClick={this.props.handleModifyContact}>Edit</button>
+                        </td>
+                        <td>
+                            <button value={data.contact_id} onClick={this.props.handleDelete}>Delete</button>
+                        </td>
                     </tr>
                 )
             })}
-        </tbody>
+            </tbody>
+        }
     }
 
     render(){

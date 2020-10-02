@@ -87,7 +87,7 @@ class NewForm extends Component{
                                                                 </tr>
                                                                 <tr>
                                                                     <th><label>Zip</label></th>
-                                                                    <td><input required value={item.zip} name="zip" type={'text'}/></td>
+                                                                    <td><input value={item.zip} name="zip" type={'text'}/></td>
                                                                 </tr>
                                                             </tbody>
                                                         )
@@ -113,7 +113,7 @@ class NewForm extends Component{
                                                         </tr>
                                                         <tr>
                                                             <th><label>Zip</label></th>
-                                                            <td><input required name="zip" type={'text'}/></td>
+                                                            <td><input name="zip" type={'text'}/></td>
                                                         </tr>
                                                     </tbody>
                                             }

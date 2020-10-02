@@ -33,12 +33,12 @@ class App extends Component {
     }
 
     onFilterTextInput = (e) => {
-        axios({
-            method : 'get',
-            url : this.state.base_url + 'all'
-        }).then(res => {
-            this.setState({data : res.data.data})
-        });
+        // axios({
+        //     method : 'get',
+        //     url : this.state.base_url + 'all'
+        // }).then(res => {
+        //     this.setState({data : res.data.data})
+        // });
     }
 
     handleModifyContact = (e) => {
@@ -46,12 +46,15 @@ class App extends Component {
     }
 
     handleDelete = (e) => {
-        axios({
-            method : 'get',
-            url : this.state.base_url + 'all'
-        }).then(res => {
-            this.setState({data : res.data.data})
-        });
+        if(window.confirm("Are you sure??"))
+        {
+            axios({
+                method : 'put',
+                url : this.state.base_url + 'delete?contact_id=' + parseInt(e.target.value)
+            }).then(r => {
+                window.location.reload(true)
+            });
+        }
     }
 
     render(){

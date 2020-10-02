@@ -4,6 +4,7 @@ const dotenv = require('dotenv')
 const bodyParser = require('body-parser')
 const getH = require('./data/getH')
 const postH = require('./data/postH')
+const putH = require('./data/putH')
 
 //configure environment variables
 dotenv.config()
@@ -24,20 +25,16 @@ app.get('/contact', (req, res) => {
     return getH.getContactEntry(req,res)
 })
 
-app.post('/addNew',() => {
-
+app.post('/addNew',(req, res) => {
+    return postH.updateDB(req, res)
 })
 
-app.delete('/delete', () => {
-
-})
-
-app.post('/updateContact', (req, res) => {
-    console.log(req.body)
+app.put('/delete', (req,res) => {
+    return putH.deleteEntry(req, res)
 })
 
 app.put('/restoreDB', (req, res) => {
-    postH.restoreDB(req, res)
+    return putH.restoreDB(req, res)
 })
 
 //start listening to requests
