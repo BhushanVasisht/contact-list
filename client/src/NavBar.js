@@ -9,6 +9,7 @@ class NavBar extends Component {
             <div>
                 <Link className={'home-page-link'} to={'/'}>Home</Link>
                 <Link className={'add-new-page-link'} to={'/addNew'}>Add-New</Link>
+                <Link className={'search-page-link'} to={'/search'}>Search</Link>
             </div>
         );
     }

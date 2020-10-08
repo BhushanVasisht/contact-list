@@ -1,14 +1,17 @@
 import React, {Component} from 'react';
-import { Redirect } from "react-router-dom";
-import './App.css';
-import ContactsTable from './ContactsTable';
+import './DisplaySearch.css';
+import SearchBar from "./SearchBar";
+import DisplaySearch from "./DisplaySearch";
 import axios from "axios";
 import NavBar from "./NavBar";
+import {Redirect} from "react-router-dom";
 
-class App extends Component {
+class Search extends Component {
 
     state = {
         data : null,
+        search_state: false,
+        search_text: '',
         base_url: 'http://localhost:3000/',
         redirect: undefined,
         page: '/'
@@ -16,9 +19,10 @@ class App extends Component {
 
     constructor(props) {
         super(props);
-
+        this.onFilterTextInput = this.onFilterTextInput.bind(this);
         this.handleModifyContact = this.handleModifyContact.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
+        this.handleClearSearch = this.handleClearSearch.bind(this);
     }
 
     componentDidMount() {
@@ -28,6 +32,18 @@ class App extends Component {
         }).then(res => {
             this.setState({data : res.data.data})
         })
+    }
+
+    onFilterTextInput = async (text) => {
+        await this.setState({search_text: '',search_state: false})
+
+        await axios({
+            method: 'get',
+            url: this.state.base_url + 'search?key=' + text
+        }).then(r => this.setState({search_text:text, data: r.data.data, search_state: true},
+            () => {
+            document.getElementById('clear-search').style.visibility = 'visible'
+        }))
     }
 
     handleModifyContact = (e) => {
@@ -56,6 +72,12 @@ class App extends Component {
         }
     }
 
+    handleClearSearch = async (e) => {
+        e.preventDefault()
+        e.target.style.visibility = 'hidden'
+        await this.setState({search_text: '', search_state: false})
+    }
+
     render(){
         if(this.state.redirect !== undefined)
         {
@@ -68,9 +90,9 @@ class App extends Component {
                 }}
             />
         }
-        else
+        else if(this.state.search_state)
         {
-            if(this.state.data !== null)
+            if(this.state.data !== null && this.state.data !== undefined)
             {
                 return (
                     <div>
@@ -80,7 +102,8 @@ class App extends Component {
                             </header>
                             <NavBar />
                         </div>
-                        <ContactsTable data = {this.state.data} handleModifyContact={this.handleModifyContact} handleDelete={this.handleDelete}/>
+                        <SearchBar text={this.state.search_text} handleAdd = {this.handleAdd} onFilterTextInput={this.onFilterTextInput} handleClearSearch={this.handleClearSearch}/>
+                        <DisplaySearch data = {this.state.data} handleModifyContact={this.handleModifyContact} handleDelete={this.handleDelete}/>
                     </div>
                 );
             }
@@ -94,12 +117,27 @@ class App extends Component {
                             </header>
                             <NavBar />
                         </div>
+                        <SearchBar text={this.state.search_text} handleAdd = {this.handleAdd} onFilterTextInput={this.onFilterTextInput} handleClearSearch={this.handleClearSearch}/>
                         <img className={'loading-gif'} src={'https://tinyurl.com/yyo3y8cn'} alt={'Loading data'} />
                     </div>
                 );
             }
         }
-  }
+        else
+        {
+            return (
+                <div>
+                    <div className="App-header">
+                        <header>
+                            <h2>Contacts List</h2>
+                        </header>
+                        <NavBar />
+                    </div>
+                    <SearchBar handleAdd = {this.handleAdd} onFilterTextInput={this.onFilterTextInput} handleClearSearch={this.handleClearSearch}/>
+                </div>
+            )
+        }
+    }
 }
 
-export default App;
+export default Search;

@@ -4,7 +4,7 @@ import './ContactsTable.css';
 class ContactsTable extends Component {
     state = {
         data : null,
-        headers : ['No.','First Name', 'Middle Name', 'Last Name', 'Telephone Numbers', 'Addresses', 'Important Dates', 'Edit', 'Delete']
+        headers : ['Sl.No','First Name', 'Middle Name', 'Last Name', 'Telephone Numbers', 'Addresses', 'Important Dates', 'Edit', 'Delete']
     }
 
     constructor(props) {

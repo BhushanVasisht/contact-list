@@ -9,18 +9,22 @@ class SearchBar extends Component {
 
     constructor(props) {
         super(props);
+
+        this.state.filterText = this.props.text;
         this.handleFilterChange = this.handleFilterChange.bind(this);
         this.handleClick = this.handleClick.bind(this);
     }
 
-    handleFilterChange(e) {
+    handleFilterChange = async (e) => {
         e.preventDefault()
-        this.setState({filterText : e.target.value})
+        await this.setState({filterText : e.target.value})
     }
 
-    handleClick(e) {
+    handleClick = async (e) => {
         e.preventDefault()
-        this.props.onFilterTextInput(this.state.filterText)
+        let text = this.state.filterText
+        this.props.onFilterTextInput(text)
+        await this.setState({filter_text: ''})
     }
 
     render() {
@@ -30,6 +34,7 @@ class SearchBar extends Component {
                     className="search-bar"
                     type="text"
                     placeholder="Search"
+                    value={this.state.filterText}
                     onChange={this.handleFilterChange}
                 />
                 <button onClick={this.handleClick} className={"submit-search"}>Search</button>
