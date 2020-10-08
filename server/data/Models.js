@@ -4,7 +4,7 @@ const { sequelize } = require('./sequelize')
 exports.Contact = sequelize.define('contact', {
     contact_id: {
         type: DataTypes.NUMBER,
-        allowNull: true,
+        autoIncrement: true,
         primaryKey: true
     },
     fname: {
@@ -26,7 +26,7 @@ exports.Contact = sequelize.define('contact', {
 exports.Address = sequelize.define('address', {
     address_id: {
         type: DataTypes.NUMBER,
-        allowNull: true,
+        autoIncrement: true,
         primaryKey: true
     },
     contact_id: {
@@ -60,7 +60,7 @@ exports.Address = sequelize.define('address', {
 exports.Phone = sequelize.define('phone', {
     phone_id: {
         type: DataTypes.NUMBER,
-        allowNull: true,
+        autoIncrement: true,
         primaryKey: true
     },
     contact_id: {
@@ -86,7 +86,7 @@ exports.Phone = sequelize.define('phone', {
 exports.Date = sequelize.define('date', {
     date_id: {
         type: DataTypes.NUMBER,
-        allowNull: true,
+        autoIncrement: true,
         primaryKey: true
     },
     contact_id: {

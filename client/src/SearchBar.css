@@ -16,10 +16,10 @@
     font-size: 20px;
 }
 
-.restore-db {
-    display: inline-block;
-    margin-top: -10px;
+#clear-search{
+    visibility: hidden;
     position: absolute;
-    left: 1300px;
+    margin-top: -10px;
+    left: 1150px;
     font-size: 20px;
 }

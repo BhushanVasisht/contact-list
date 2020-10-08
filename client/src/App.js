@@ -12,8 +12,7 @@ class App extends Component {
         data : null,
         base_url: 'http://localhost:3000/',
         redirect: undefined,
-        page: '/',
-        rerender: false
+        page: '/'
     }
 
     constructor(props) {
@@ -21,6 +20,7 @@ class App extends Component {
         this.onFilterTextInput = this.onFilterTextInput.bind(this);
         this.handleModifyContact = this.handleModifyContact.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
+        this.handleClearSearch = this.handleClearSearch.bind(this);
     }
 
     componentDidMount() {
@@ -32,29 +32,42 @@ class App extends Component {
         })
     }
 
-    onFilterTextInput = (e) => {
-        // axios({
-        //     method : 'get',
-        //     url : this.state.base_url + 'all'
-        // }).then(res => {
-        //     this.setState({data : res.data.data})
-        // });
+    onFilterTextInput = async (text) => {
+        await axios({
+            method: 'get',
+            url: this.state.base_url + 'search?key=' + text
+        }).then(r => this.setState({data: r.data.data},
+            () => document.getElementById('clear-search').style.visibility = 'visible'
+        ))
     }
 
     handleModifyContact = (e) => {
+        e.preventDefault()
         this.setState({redirect : parseInt(e.target.value), page : '/modify'})
     }
 
     handleDelete = (e) => {
+        e.preventDefault()
         if(window.confirm("Are you sure??"))
         {
             axios({
                 method : 'put',
                 url : this.state.base_url + 'delete?contact_id=' + parseInt(e.target.value)
             }).then(r => {
-                window.location.reload(true)
+                axios({
+                    method : 'get',
+                    url : this.state.base_url + 'all'
+                }).then(res => {
+                    this.setState({data : res.data.data}, ()=> window.location.reload(false))
+                })
             });
         }
+    }
+
+    handleClearSearch = (e) => {
+        e.preventDefault()
+        e.target.style.visibility = 'hidden'
+        window.location.reload(false)
     }
 
     render(){
@@ -64,8 +77,8 @@ class App extends Component {
                 to={{
                     pathname: this.state.page,
                     state: { item: {
-                            data : this.state.data[this.state.redirect]
-                    }}
+                            id: this.state.redirect
+                        }}
                 }}
             />
         }
@@ -81,7 +94,7 @@ class App extends Component {
                             </header>
                             <NavBar />
                         </div>
-                        <SearchBar handleAdd = {this.handleAdd} onFilterTextInput={this.onFilterTextInput}/>
+                        <SearchBar handleAdd = {this.handleAdd} onFilterTextInput={this.onFilterTextInput} handleClearSearch={this.handleClearSearch}/>
                         <ContactsTable data = {this.state.data} handleModifyContact={this.handleModifyContact} handleDelete={this.handleDelete}/>
                     </div>
                 );
@@ -96,7 +109,7 @@ class App extends Component {
                             </header>
                             <NavBar />
                         </div>
-                        <SearchBar handleAdd = {this.handleAdd} onFilterTextInput={this.onFilterTextInput}/>
+                        <SearchBar handleAdd = {this.handleAdd} onFilterTextInput={this.onFilterTextInput} handleClearSearch={this.handleClearSearch}/>
                         <img className={'loading-gif'} src={'https://tinyurl.com/yyo3y8cn'} alt={'Loading data'} />
                     </div>
                 );

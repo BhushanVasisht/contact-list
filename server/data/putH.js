@@ -6,15 +6,11 @@ const { sequelize } = require('./sequelize')
 
 exports.restoreDB = async (req, res) => {
 
-    await sequelize.query('SET GLOBAL FOREIGN_KEY_CHECKS = 0;', {raw: true});
-
     // Do Some Action
     await models.Contact.destroy({ truncate: {cascade: true} })
     await models.Address.destroy({ truncate: {cascade: true} })
     await models.Date.destroy({ truncate: {cascade: true} })
     await models.Phone.destroy({ truncate: {cascade: true} })
-
-    await sequelize.query('SET GLOBAL FOREIGN_KEY_CHECKS = 1;', {raw: true});
 
     const fileStream = fs.createReadStream(path.resolve(__dirname, './Contacts.csv'))
     const rl = readline.createInterface({
@@ -129,6 +125,5 @@ exports.deleteEntry = async (req, res) => {
         }
     })
 
-    res.statusCode = 200
-    res.send('OK')
+    res.send("OK")
 }

@@ -24,7 +24,7 @@ class ContactsTable extends Component {
         }
         else {
             let count = 1;
-            return <tbody>{this.state.data.map((data, key) => {
+            return <tbody>{this.state.data === undefined ? <tr></tr>: this.state.data.map((data, key) => {
                 return (
                     <tr key={key}>
                         <td>{count++}</td>
@@ -33,7 +33,7 @@ class ContactsTable extends Component {
                         <td>{data.lname}</td>
                         <td>
                             <table className={"variable-table"}>
-                                {data.phone_list.map((item, k) => {
+                                {data.phone_list === undefined ? <tbody><tr></tr></tbody> : data.phone_list.map((item, k) => {
                                     return (
                                         <tbody key={k}>
                                         <tr>
@@ -50,7 +50,7 @@ class ContactsTable extends Component {
                             <div>
                                 <table>
                                     <tbody className={"variable-table"}>
-                                    {data.address_list.map((item, k) => {
+                                    {data.address_list === undefined ? <tr></tr> :data.address_list.map((item, k) => {
                                         return (
                                             <tr key={k}>
                                                 <th>{item.address_type}</th>
@@ -67,7 +67,7 @@ class ContactsTable extends Component {
                             <div>
                                 <table>
                                     <tbody className={"variable-table"}>
-                                    {data.date_list.map((item, k) => {
+                                    {data.date_list === undefined ? <tr></tr> :data.date_list.map((item, k) => {
                                         return (
                                             <tr key={k}>
                                                 <th>{item.date_type}</th>
@@ -80,7 +80,7 @@ class ContactsTable extends Component {
                             </div>
                         </td>
                         <td>
-                            <button value={key} onClick={this.props.handleModifyContact}>Edit</button>
+                            <button value={data.contact_id} onClick={this.props.handleModifyContact}>Edit</button>
                         </td>
                         <td>
                             <button value={data.contact_id} onClick={this.props.handleDelete}>Delete</button>

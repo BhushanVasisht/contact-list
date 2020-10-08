@@ -11,7 +11,7 @@ exports.getAllData = async (res) => {
     {
         let contact_row = contact_data[i];
         let rowObj = {}
-        rowObj['contact_id'] = contact_row.contact_id
+        rowObj['contact_id'] = contact_data[i].contact_id
         rowObj['fname'] = contact_row.fname
         rowObj['mname'] = contact_row.mname
         rowObj['lname'] = contact_row.lname
@@ -30,14 +30,14 @@ exports.getAllData = async (res) => {
         {
             let add_row = address_data[j];
             let addObj = {}
-            addObj['contact_id'] = rowObj['contact_id']
+            addObj['contact_id'] = contact_data[i].contact_id
             addObj['address_id'] = add_row.address_id
             addObj['address_type'] = add_row.address_type
             addObj['address'] = add_row.address
             addObj['city'] = add_row.city
             addObj['state'] = add_row.state
             addObj['zip'] = add_row.zip
-            rowObj['address_list'].push(addObj)
+            await rowObj['address_list'].push(addObj)
         }
 
         const phone_data = await models.Phone.findAll({
@@ -51,12 +51,12 @@ exports.getAllData = async (res) => {
         {
             let phone_row = phone_data[j];
             let phoneObj = {}
-            phoneObj['contact_id'] = rowObj['contact_id']
+            phoneObj['contact_id'] = contact_data[i].contact_id
             phoneObj['phone_id'] = phone_row.phone_id
             phoneObj['phone_type'] = phone_row.phone_type
             phoneObj['area_code'] = phone_row.area_code
             phoneObj['number'] = phone_row.number
-            rowObj['phone_list'].push(phoneObj)
+            await rowObj['phone_list'].push(phoneObj)
         }
 
         const date_data = await models.Date.findAll({
@@ -70,13 +70,13 @@ exports.getAllData = async (res) => {
         {
             let date_row = date_data[j];
             let dateObj = {}
-            dateObj['contact_id'] = rowObj['contact_id']
+            dateObj['contact_id'] = contact_data[i].contact_id
             dateObj['date_id'] = date_row.date_id
             dateObj['date_type'] = date_row.date_type
             dateObj['date'] = date_row.date
-            rowObj['date_list'].push(dateObj)
+            await rowObj['date_list'].push(dateObj)
         }
-        table.push(rowObj)
+        await table.push(rowObj)
     }
     res.json({data : table})
 }
@@ -117,7 +117,7 @@ exports.getContactEntry = async (req, res) => {
         addObj['city'] = add_row.city
         addObj['state'] = add_row.state
         addObj['zip'] = add_row.zip
-        rowObj['address_list'].push(addObj)
+        await rowObj['address_list'].push(addObj)
     }
 
     const phone_data = await models.Phone.findAll({
@@ -136,7 +136,7 @@ exports.getContactEntry = async (req, res) => {
         phoneObj['phone_type'] = phone_row.phone_type
         phoneObj['area_code'] = phone_row.area_code
         phoneObj['number'] = phone_row.number
-        rowObj['phone_list'].push(phoneObj)
+        await rowObj['phone_list'].push(phoneObj)
     }
 
     const date_data = await models.Date.findAll({
@@ -154,9 +154,12 @@ exports.getContactEntry = async (req, res) => {
         dateObj['date_id'] = date_row.date_id
         dateObj['date_type'] = date_row.date_type
         dateObj['date'] = date_row.date
-        rowObj['date_list'].push(dateObj)
-        console.log(rowObj)
+        await rowObj['date_list'].push(dateObj)
     }
 
-    res.json({data : rowObj});
+    return res.json({data : rowObj});
+}
+
+exports.searchResults = (req, res) => {
+    return res.json({data: [{contact_id: 0, fname: 'fname', mname: 'mname', lname: 'lname', address_list: [], date_list: [], phone_list: []}]})
 }

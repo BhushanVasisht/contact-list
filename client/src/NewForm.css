@@ -6,11 +6,14 @@
     font-size: small;
 }
 
+.internal-date-table {
+    font-size: small;
+}
+
 .form-table{
     width: auto;
 }
 
 .contact-form {
-    overflow-x: scroll;
     margin-top: -20px;
 }

@@ -14,11 +14,12 @@ class SearchBar extends Component {
     }
 
     handleFilterChange(e) {
+        e.preventDefault()
         this.setState({filterText : e.target.value})
     }
 
     handleClick(e) {
-        console.log("hi")
+        e.preventDefault()
         this.props.onFilterTextInput(this.state.filterText)
     }
 
@@ -32,6 +33,7 @@ class SearchBar extends Component {
                     onChange={this.handleFilterChange}
                 />
                 <button onClick={this.handleClick} className={"submit-search"}>Search</button>
+                <button id={"clear-search"} onClick={this.props.handleClearSearch}>Clear</button>
             </div>
         );
     }

@@ -25,6 +25,10 @@ app.get('/contact', (req, res) => {
     return getH.getContactEntry(req,res)
 })
 
+app.get('/search', (req,res) => {
+    return getH.searchResults(req, res)
+})
+
 app.post('/addNew',(req, res) => {
     return postH.updateDB(req, res)
 })
