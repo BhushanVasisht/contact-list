@@ -46,11 +46,11 @@ class App extends Component {
         this.setState({redirect : parseInt(e.target.value), page : '/modify'})
     }
 
-    handleDelete = (e) => {
+    handleDelete = async (e) => {
         e.preventDefault()
         if(window.confirm("Are you sure??"))
         {
-            axios({
+            await axios({
                 method : 'put',
                 url : this.state.base_url + 'delete?contact_id=' + parseInt(e.target.value)
             }).then(r => {
@@ -58,7 +58,10 @@ class App extends Component {
                     method : 'get',
                     url : this.state.base_url + 'all'
                 }).then(res => {
-                    this.setState({data : res.data.data}, ()=> window.location.reload(false))
+                    this.setState({data : res.data.data}, async ()=> {
+                        await window.location.reload(false)
+                        alert('Entry Deleted')
+                    })
                 })
             });
         }
