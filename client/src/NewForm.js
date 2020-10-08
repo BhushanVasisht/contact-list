@@ -219,45 +219,36 @@ class NewForm extends Component{
         let id = e.target.id
         if(id === "address")
         {
-            let atemp = this.state.address_list
-            delete atemp[parseInt(e.target.value)]
+            let atemp = []
 
-            if(atemp.length === 0)
-            {
-                this.setState({address_list : []})
+            for(let i = 0; i < this.state.address_list.length; ++i) {
+                if (i !== parseInt(e.target.value))
+                    atemp.push(this.state.address_list[i])
             }
-            else
-            {
-                this.setState({address_list: atemp})
-            }
+
+            this.setState({address_list: atemp})
         }
         else if(id === "phone")
         {
-            let ptemp = this.state.phone_list
-            delete ptemp[parseInt(e.target.value)]
+            let ptemp = []
 
-            if(ptemp.length === 0)
-            {
-                this.setState({phone_list : []})
+            for(let i = 0; i < this.state.phone_list.length; ++i) {
+                if (i !== parseInt(e.target.value))
+                    ptemp.push(this.state.phone_list[i])
             }
-            else
-            {
-                this.setState({phone_list: ptemp})
-            }
+
+            this.setState({phone_list: ptemp})
         }
         else if(id === "date")
         {
-            let dtemp = this.state.date_list
-            delete dtemp[parseInt(e.target.value)]
+            let dtemp = []
 
-            if(dtemp.length === 0)
-            {
-                this.setState({date_list : []})
+            for(let i = 0; i < this.state.date_list.length; ++i) {
+                if (i !== parseInt(e.target.value))
+                    dtemp.push(this.state.date_list[i])
             }
-            else
-            {
-                this.setState({date_list: dtemp})
-            }
+
+            this.setState({date_list: dtemp})
         }
     }
 
