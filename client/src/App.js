@@ -43,15 +43,7 @@ class App extends Component {
                 method : 'put',
                 url : this.state.base_url + 'delete?contact_id=' + parseInt(e.target.value)
             }).then(r => {
-                axios({
-                    method : 'get',
-                    url : this.state.base_url + 'all'
-                }).then(res => {
-                    this.setState({data : res.data.data}, async ()=> {
-                        await window.location.reload(false)
-                        alert('Entry Deleted')
-                    })
-                })
+                window.location.reload(false)
             });
         }
     }
